@@ -8,6 +8,7 @@ namespace ariel{
     // OrgChart::OrgChart(){}
     OrgChart& OrgChart::add_root(string s){}
     OrgChart& OrgChart::add_sub(string sup, string inf){}
+    int OrgChart::begin(){}
     auto OrgChart::begin_level_order(){}
     auto OrgChart::end_level_order(){}
     auto OrgChart::begin_reverse_order(){}
