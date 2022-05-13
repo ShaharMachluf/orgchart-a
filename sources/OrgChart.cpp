@@ -15,22 +15,22 @@ namespace ariel{
         return this->x;
     }
     string* OrgChart::begin_level_order(){
-        return this->s;
+        return &(this->vec[0]);
     }
     string* OrgChart::end_level_order(){
-        return this->s;
+        return &(this->vec[0]);
     }
     string* OrgChart::begin_reverse_order(){
-        return this->s;
+        return &(this->vec[0]);
     }
     string* OrgChart::reverse_order(){
-        return this->s;
+        return &(this->vec[0]);
     }
     string* OrgChart::begin_preorder(){
-        return this->s;
+        return &(this->vec[0]);
     }
     string* OrgChart::end_preorder(){
-        return this->s;
+        return &(this->vec[0]);
     }
     ostream& operator<<(std::ostream& output, const OrgChart& other){return output;}
 }
