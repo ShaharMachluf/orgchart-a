@@ -2,8 +2,13 @@
 #include <vector>
 
 namespace ariel{
+    struct Tree{
+        std::string data;
+        std::vector<Tree*> children;
+    };
 
     class OrgChart{
+        struct Tree *root;
         std::vector <std::string> vec{"hi","hi","hi","hi","hi","hi"};
         int *x;
         public:
@@ -23,5 +28,15 @@ namespace ariel{
         std::string* end_preorder();
 
         friend std::ostream& operator<<(std::ostream& output, const OrgChart& other);
+
+        class Iterator{
+            struct Tree *ptr;
+            public:
+            Iterator(OrgChart o);
+            Iterator& operator++();
+            std::string operator*();
+            bool operator==(Iterator &other);
+            bool operator!=(Iterator &other);
+        };
     };
 }
