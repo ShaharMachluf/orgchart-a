@@ -16,8 +16,8 @@ namespace ariel{
         OrgChart& add_root(std::string s);
         OrgChart& add_sub(std::string sup, std::string inf);
 
-        int* begin();
-        int* end();
+        std::string* begin();
+        std::string* end();
         std::string* begin_level_order();
         std::string* end_level_order();
 

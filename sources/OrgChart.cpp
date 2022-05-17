@@ -53,11 +53,11 @@ namespace ariel{
         // throw("%s doesn't exist", sup);
         return *this;
     }
-    int* OrgChart::begin(){
-        return this->x;
+    string* OrgChart::begin(){
+        return &(this->vec[0]);
     }
-    int* OrgChart::end(){
-        return this->x;
+    string* OrgChart::end(){
+        return &(this->vec[0]);
     }
     string* OrgChart::begin_level_order(){
         return &(this->vec[0]);
