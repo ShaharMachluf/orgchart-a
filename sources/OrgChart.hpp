@@ -1,5 +1,7 @@
 #include <string>
 #include <vector>
+#include <queue>
+#include <stack>
 
 namespace ariel{
     struct Tree{
@@ -31,12 +33,17 @@ namespace ariel{
 
         class Iterator{
             struct Tree *ptr;
+            std::string order;
+            std::queue<struct Tree*> q;
+            std::stack<struct Tree*> s;
+            void preorder(struct Tree* node);
             public:
-            Iterator(OrgChart o);
+            Iterator(OrgChart o ,std::string order);
             Iterator& operator++();
             std::string operator*();
             bool operator==(Iterator &other);
             bool operator!=(Iterator &other);
+            Iterator& operator=(Iterator &other);
         };
     };
 }
